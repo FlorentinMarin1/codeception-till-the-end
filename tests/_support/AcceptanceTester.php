@@ -23,4 +23,14 @@ class AcceptanceTester extends \Codeception\Actor
     /**
      * Define custom actions here
      */
+
+    public function assertTitlePage($page)
+    {
+        $this->seeInTitle($page);
+    }
+
+    public function assertDbRows()
+    {
+        $this->seeInDatabase('player', ['firstName' => 'Florentin']);
+    }
 }

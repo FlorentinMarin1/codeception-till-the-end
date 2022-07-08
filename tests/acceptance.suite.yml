@@ -7,11 +7,23 @@
 actor: AcceptanceTester
 modules:
     enabled:
-#        - WebDriver:
-#            url: http://localhost/codeception-till-the-end/index.php
-#            browser: chrome
-#            port : 9515
-        - PhpBrowser:
+        - WebDriver:
             url: http://localhost/codeception-till-the-end/index.php
+            browser: chrome
+            capabitilies:
+                chromeOptions:
+                    args: ["--headless", "--disable-gpu"]
+                    prefs:
+                        download.defaul_directory: "..."
+            port : 9515
+        - Db:
+            dsn: 'mysql:host=127.0.0.1;dbname=Football'
+            user: 'root'
+            password: ''
+            populate: false
+            cleanup: false
+#        - PhpBrowser:
+#            url: http://localhost/codeception-till-the-end/index.php
         - \Helper\Acceptance
+
 step_decorators: ~        
