@@ -7,8 +7,8 @@
 </head>
 <body>
 <h2>Player register: </h2>
-<!--<form action="Includes/logic.php" method="POST">-->
-<form method="POST">
+<form action="src/includes/logic.php" method="POST">
+<!--<form method="POST">-->
     <label for="first">First name:</label><br>
     <input type="text" id="first" name="first" placeholder="First Name"><br>
     <label for="last">Last name:</label><br>

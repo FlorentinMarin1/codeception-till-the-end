@@ -15,7 +15,6 @@ class Dbh
               $this->password
           );
           return $dbh;
-
       }
       catch (PDOException $exception){
             print "Error!: " . $exception->getMessage() . "<br>";

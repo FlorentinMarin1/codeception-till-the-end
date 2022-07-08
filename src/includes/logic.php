@@ -23,5 +23,6 @@ $registerPlayer->setPlayer(
     $age,
     $marketValue
 );
-header("Location: ../index.php?register=success");
+
+header("Location: ../../index.php?register=success");
 
