@@ -22,3 +22,18 @@ class Dbh
       }
   }
 }
+
+/* database script
+CREATE TABLE `Football`.`player`(
+`id` SMALLINT(9) NOT NULL ,
+ `first_name` VARCHAR(256) NOT NULL ,
+`last_name` VARCHAR(256) NOT NULL ,
+`club` VARCHAR(256) NOT NULL ,
+`nationality` VARCHAR(256) NOT NULL ,
+`position` VARCHAR(256) NOT NULL ,
+`age` INT(3) NOT NULL ,
+`market_value` INT(11) NOT NULL ,
+UNIQUE `id_name` (`id`)
+)
+ENGINE = InnoDB;
+*/

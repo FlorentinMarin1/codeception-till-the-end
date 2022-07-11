@@ -9,11 +9,10 @@ class CheckDetailsPageCest
     // tests
     public function tryToTest(AcceptanceTester $I)
     {
-        $I->amOnPage('/');
+        $I->amOnPage('');
         $I->see('Player register');
-        $I->wait(10);
         $I->assertTitlePage('My little page');
+        $I->registerPlayer();
         $I->assertDbRows();
-        print("I'm here!");
     }
 }

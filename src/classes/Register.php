@@ -13,7 +13,7 @@ class Register extends Dbh
         $marketValue
     )
     {
-        $sql = 'INSERT INTO player (firstname, lastname, club, nationality, position, age, marketvalue) values (?, ?, ?, ?, ?, ?, ?)';
+        $sql = 'INSERT INTO player (first_name, last_name, club, nationality, position, age, market_value) values (?, ?, ?, ?, ?, ?, ?)';
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$firstName, $lastName, $club, $nationality, $position, $age, $marketValue]);
     }

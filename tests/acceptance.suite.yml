@@ -20,10 +20,12 @@ modules:
             dsn: 'mysql:host=127.0.0.1;dbname=Football'
             user: 'root'
             password: ''
-            populate: false
-            cleanup: false
+            populate: true
+            cleanup: true
+            dump: 'tests/_data/cleanup.sql'
+        - Asserts
 #        - PhpBrowser:
-#            url: http://localhost/codeception-till-the-end/index.php
+#            url: ""
         - \Helper\Acceptance
 
 step_decorators: ~        

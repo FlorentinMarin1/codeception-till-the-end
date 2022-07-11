@@ -29,8 +29,29 @@ class AcceptanceTester extends \Codeception\Actor
         $this->seeInTitle($page);
     }
 
+    public function registerPlayer()
+    {
+        $this->submitForm('#player_register', [
+            'first' => 'Florentin',
+            'last' => 'Marin',
+            'club' => 'Liverpool',
+            'nationality' => 'romanian',
+            'position' => 'midfielder',
+            'age' => 30,
+            'marketValue' => 400000
+        ]);
+    }
+
     public function assertDbRows()
     {
-        $this->seeInDatabase('player', ['firstName' => 'Florentin']);
+        $this->seeInDatabase('player', [
+            'first_name' => 'Florentin',
+            'last_name' => 'Marin',
+            'club' => 'Liverpool',
+            'nationality' => 'romanian',
+            'position' => 'midfielder',
+            'age' => 30,
+            'market_value' => 400000
+        ]);
     }
 }
