@@ -45,6 +45,7 @@ class AcceptanceTester extends \Codeception\Actor
     public function assertDbRows()
     {
         $this->seeInDatabase('player', [
+            'id' => 1,
             'first_name' => 'Florentin',
             'last_name' => 'Marin',
             'club' => 'Liverpool',
